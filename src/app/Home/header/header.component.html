@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-<body>
-    
-      <header>
-        <div class="logo">
-          <a href="../../assets/images/google_doodle.gif">Ekart</a>
-        </div>
-        <button class="navbar-toggler" (click)="toggleNavbar()">
-          &#9776; <!-- Hamburger icon -->
-        </button>
-        <nav class="navbar" [class.is-active]="isNavbarCollapsed">
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="./../../product/product.component.html">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        
-      </header>
-            
-</body>
-</html>
+<header>
+  <div class="logo">
+    <a href="../../assets/images/google_doodle.gif">Ekart</a>
+  </div>
+  <app-search></app-search>
+  
+  <!-- Hamburger button outside the nav element -->
+  <button class="navbar-toggler" (click)="toggleNavbar($event)">&#9776;</button>
+  
+  <!-- The actual navigation links -->
+  <nav class="navbar" [class.active]="isNavbarOpen" (click)="onNavbarClick($event)">
+    <ul class="nav-links" [class.active]="isNavbarOpen">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>

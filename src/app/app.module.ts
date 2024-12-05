@@ -10,6 +10,7 @@ import { HomeComponent } from './Home/home.component';
 import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { SearchComponent } from './Home/header/search/search.component';
 
 
 
@@ -24,6 +25,7 @@ import { ContactComponent } from './contact/contact.component';
     ProductComponent,
     AboutComponent,
     ContactComponent,
+    SearchComponent,
     
     
   ],
